@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "454108619981",
+    "project_id": "shopline-4c2e4",
+    "storage_bucket": "shopline-4c2e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454108619981:android:94b32b14961084d1db7584",
+        "android_client_info": {
+          "package_name": "com.dedevs.shopline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454108619981-7hkt4vk6lhej3sakh2ie65f8jk90g902.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6xzimJNVylC10_8TuqqZ5nubyR677wpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "454108619981-7hkt4vk6lhej3sakh2ie65f8jk90g902.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454108619981:android:54da85666ec5a1c2db7584",
+        "android_client_info": {
+          "package_name": "com.emmaline.eshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454108619981-7hkt4vk6lhej3sakh2ie65f8jk90g902.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6xzimJNVylC10_8TuqqZ5nubyR677wpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "454108619981-7hkt4vk6lhej3sakh2ie65f8jk90g902.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
