@@ -51,7 +51,7 @@ class _MainPageState extends State<MainPage>
   void initState() {
     super.initState();
     tabController = TabController(length: 5, vsync: this);
-    bottomTabController = TabController(length: 4, vsync: this);
+    bottomTabController = TabController(length: 5, vsync: this);
   }
 
   @override
@@ -63,12 +63,12 @@ class _MainPageState extends State<MainPage>
         children: <Widget>[
           IconButton(
               onPressed: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (_) => NotificationsPage())),
-              icon: Icon(Icons.notifications)),
+                  .push(MaterialPageRoute(builder: (_) => SearchPage())),
+              icon: Icon(Icons.search_outlined)),
           IconButton(
               onPressed: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (_) => SearchPage())),
-              icon: SvgPicture.asset('assets/icons/search_icon.svg'))
+                  .push(MaterialPageRoute(builder: (_) => CheckOutPage())),
+              icon: Icon(Icons.shopping_cart_outlined))
         ],
       ),
     );
@@ -193,6 +193,14 @@ class _MainPageState extends State<MainPage>
       controller: tabController,
     );
 
+    Widget floatingActionButton = FloatingActionButton(
+      onPressed: () {
+        // Add your onPressed code here!
+      },
+      child: Icon(Icons.add),
+      backgroundColor: Colors.blueAccent,
+    );
+
     return Scaffold(
       bottomNavigationBar: CustomBottomBar(controller: bottomTabController),
       body: CustomPaint(
@@ -235,6 +243,7 @@ class _MainPageState extends State<MainPage>
           ],
         ),
       ),
+      floatingActionButton: floatingActionButton,
     );
   }
 }
