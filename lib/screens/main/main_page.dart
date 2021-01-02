@@ -229,6 +229,7 @@ class _MainPageState extends State<MainPage>
               ),
             ),
             CategoryListPage(),
+            NotificationsPage(),
             CheckOutPage(),
             ProfilePage()
           ],
