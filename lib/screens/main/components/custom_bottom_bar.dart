@@ -7,7 +7,6 @@ class CustomBottomBar extends StatelessWidget {
   const CustomBottomBar({Key key, this.controller}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final bag = {"first": true};
     return BottomAppBar(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -15,14 +14,8 @@ class CustomBottomBar extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.home_outlined),
             // color: Colors.blueGrey,
-            color: bag["first"] ? Colors.red : Colors.blue,
             onPressed: () {
               controller.animateTo(0);
-              bag["first"] = !bag["first"];
-              //
-              // This is the trick
-              //
-              (context as Element).markNeedsBuild();
             },
           ),
           IconButton(
@@ -38,7 +31,7 @@ class CustomBottomBar extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: Icon(Icons.shopping_cart_outlined),
+            icon: Icon(Icons.pie_chart_outline_sharp),
             onPressed: () {
               controller.animateTo(3);
             },
