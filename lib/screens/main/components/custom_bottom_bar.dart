@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomBottomBar extends StatelessWidget {
   final TabController controller;
@@ -7,35 +7,46 @@ class CustomBottomBar extends StatelessWidget {
   const CustomBottomBar({Key key, this.controller}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final bag = {"first": true};
     return BottomAppBar(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           IconButton(
-            icon: SvgPicture.asset(
-                    'assets/icons/home_icon.svg',
-                    fit: BoxFit.fitWidth,
-                    ),
+            icon: Icon(Icons.home_outlined),
+            // color: Colors.blueGrey,
+            color: bag["first"] ? Colors.red : Colors.blue,
             onPressed: () {
               controller.animateTo(0);
+              bag["first"] = !bag["first"];
+              //
+              // This is the trick
+              //
+              (context as Element).markNeedsBuild();
             },
           ),
           IconButton(
-            icon: Image.asset('assets/icons/category_icon.png'),
+            icon: Icon(Icons.list_alt),
             onPressed: () {
               controller.animateTo(1);
             },
           ),
           IconButton(
-            icon: SvgPicture.asset('assets/icons/cart_icon.svg'),
+            icon: Icon(Icons.notifications_outlined),
             onPressed: () {
               controller.animateTo(2);
             },
           ),
           IconButton(
-            icon: Image.asset('assets/icons/profile_icon.png'),
+            icon: Icon(Icons.shopping_cart_outlined),
             onPressed: () {
               controller.animateTo(3);
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.account_circle_outlined),
+            onPressed: () {
+              controller.animateTo(4);
             },
           )
         ],
