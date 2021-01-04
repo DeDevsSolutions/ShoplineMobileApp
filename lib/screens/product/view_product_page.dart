@@ -1,6 +1,6 @@
 import 'package:shopline/models/product.dart';
 import 'package:shopline/screens/product/components/rating_bottomSheet.dart';
-import 'package:shopline/screens/search_page.dart';
+import 'package:shopline/screens/discover/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
