@@ -1,6 +1,7 @@
 import 'package:shopline/app_properties.dart';
 import 'package:shopline/custom_background.dart';
 import 'package:shopline/models/product.dart';
+import 'file:///C:/Users/MATT/AndroidStudioProjects/New%20Shopline/ShoplineMobileApp/lib/screens/profile/User_Profile.dart';
 import 'package:shopline/screens/category/category_list_page.dart';
 import 'package:shopline/screens/notifications_page.dart';
 import 'package:shopline/screens/profile_page.dart';
@@ -239,7 +240,8 @@ class _MainPageState extends State<MainPage>
             CategoryListPage(),
             NotificationsPage(),
             CheckOutPage(),
-            ProfilePage()
+            // ProfilePage()
+            UserProfile(),
           ],
         ),
       ),
