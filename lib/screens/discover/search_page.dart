@@ -88,23 +88,51 @@ class _SearchPageState extends State<SearchPage>
       margin: const EdgeInsets.only(top: kToolbarHeight),
       child: Column(
         children: <Widget>[
-          Padding(
+          /*  Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
-                  'Search',
+                  'Discover',
                   style: TextStyle(
-                    color: darkGrey,
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
+                    color: Color(0xff5d4c77),
+                    fontSize: 18,
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
                 CloseButton()
               ],
             ),
-          ),
+          ), */
+          Container(
+              width: 360,
+              height: 42,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(0),
+                  topRight: Radius.circular(0),
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                ),
+                color: Colors.white,
+              ),
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text(
+                      "Discover",
+                      style: TextStyle(
+                        color: Color(0xff5d4c77),
+                        fontSize: 18,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    CloseButton()
+                    //Icon(Icons.search_outlined),
+                  ])),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 16.0),
             decoration: BoxDecoration(
