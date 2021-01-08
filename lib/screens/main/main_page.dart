@@ -1,7 +1,6 @@
 import 'package:shopline/app_properties.dart';
 import 'package:shopline/custom_background.dart';
 import 'package:shopline/models/product.dart';
-import 'file:///C:/Users/MATT/AndroidStudioProjects/New%20Shopline/ShoplineMobileApp/lib/screens/profile/User_Profile.dart';
 import 'package:shopline/screens/category/category_list_page.dart';
 import 'package:shopline/screens/comments/comments_page.dart';
 import 'package:shopline/screens/discover/discover_empty.dart';
@@ -9,6 +8,8 @@ import 'package:shopline/screens/discover/discover_one.dart';
 import 'package:shopline/screens/notifications_empty.dart';
 import 'package:shopline/screens/notifications_full.dart';
 import 'package:shopline/screens/notifications_page.dart';
+import 'package:shopline/screens/order/order.dart';
+import 'package:shopline/screens/profile/User_Profile.dart';
 import 'package:shopline/screens/profile_page.dart';
 import 'package:shopline/screens/discover/search_page.dart';
 import 'package:shopline/screens/shop/check_out_page.dart';
@@ -243,8 +244,8 @@ class _MainPageState extends State<MainPage>
               ),
             ),
             CategoryListPage(),
-            NotificationsPage(),
-            CheckOutPage(),
+            NotificationsFull(),
+            OrderPage(),
             // ProfilePage()
             UserProfile(),
           ],
