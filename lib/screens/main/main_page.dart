@@ -1,6 +1,7 @@
 import 'package:shopline/app_properties.dart';
 import 'package:shopline/custom_background.dart';
 import 'package:shopline/models/product.dart';
+import 'package:shopline/screens/profile/User_Profile.dart';
 import 'package:shopline/screens/category/category_list_page.dart';
 import 'package:shopline/screens/comments/comments_page.dart';
 import 'package:shopline/screens/discover/discover_empty.dart';
