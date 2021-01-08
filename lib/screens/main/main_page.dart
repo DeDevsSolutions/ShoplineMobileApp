@@ -9,6 +9,8 @@ import 'package:shopline/screens/discover/discover_one.dart';
 import 'package:shopline/screens/notifications_empty.dart';
 import 'package:shopline/screens/notifications_full.dart';
 import 'package:shopline/screens/notifications_page.dart';
+import 'package:shopline/screens/order/order.dart';
+import 'package:shopline/screens/profile/User_Profile.dart';
 import 'package:shopline/screens/profile_page.dart';
 import 'package:shopline/screens/discover/search_page.dart';
 import 'package:shopline/screens/shop/check_out_page.dart';
@@ -243,8 +245,8 @@ class _MainPageState extends State<MainPage>
               ),
             ),
             CategoryListPage(),
-            NotificationsPage(),
-            CheckOutPage(),
+            NotificationsFull(),
+            OrderPage(),
             // ProfilePage()
             UserProfile(),
           ],
