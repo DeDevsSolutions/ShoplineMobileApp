@@ -51,6 +51,12 @@ class UserProfile extends StatelessWidget {
       key: _globalKey,
       backgroundColor: Color(0xffF1F1F1),
       appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: Icon(TablerIcons.align_right),
+            onPressed: () => _globalKey.currentState.openEndDrawer(),
+          ),
+        ],
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         iconTheme: IconThemeData(
@@ -539,7 +545,7 @@ class UserProfile extends StatelessWidget {
                       ),
                       ListTile(
                         leading: Icon(
-                          Icons.person_add_alt_1,
+                          TablerIcons.user_plus,
                           color: colorCustom,
                         ),
                         title: Text('Invite friends'),

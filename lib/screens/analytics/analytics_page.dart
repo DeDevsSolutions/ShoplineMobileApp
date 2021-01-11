@@ -2,8 +2,6 @@ import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shopline/screens/analytics/tabs/market_stats_tab.dart';
-import 'package:shopline/screens/profile/tabs/catalog_tab.dart';
-import 'package:shopline/screens/profile/tabs/review_tab.dart';
 
 class AnalyticsPage extends StatelessWidget {
   final _globalKey = GlobalKey<ScaffoldState>();
@@ -84,8 +82,8 @@ class AnalyticsPage extends StatelessWidget {
           body: TabBarView(
             children: [
               MarketStatsTab(),
-              CatalogTab(),
-              ReviewTab(),
+              new Card(),
+              MarketStatsTab(),
             ],
           ),
         ),

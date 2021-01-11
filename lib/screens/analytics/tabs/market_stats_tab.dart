@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 
 class MarketStatsTab extends StatelessWidget {
@@ -143,71 +144,242 @@ class MarketStatsTab extends StatelessWidget {
                     ))
                   ],
                 ),
-                Container(
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                      color: Color(0xff5458f7),
-                      width: 2,
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Daily Plan",
-                            style: TextStyle(
-                              color: Color(0xff1d2f6f),
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            "\$2",
-                            style: TextStyle(
-                              color: Color(0xffff8c39),
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
+                InkWell(
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 10),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        color: colorCustom.shade500,
+                        width: 2,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          FlatButton(
-                            padding: EdgeInsets.all(5),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
-                            color: Color(0xffff8c39),
-                            textColor: Colors.white,
-                            onPressed: () {},
-                            child: Text(
-                              "Save 65%",
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Daily Plan",
                               style: TextStyle(
-                                fontSize: 15,
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w500,
+                                color: Color(0xff1d2f6f),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "\$2",
+                              style: TextStyle(
+                                color: Color(0xffff8c39),
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                )
+                ),
+                InkWell(
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 10),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        color: colorCustom.shade500,
+                        width: 2,
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Weekly Plan",
+                              style: TextStyle(
+                                color: Color(0xff1d2f6f),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "\$7",
+                              style: TextStyle(
+                                color: Color(0xffff8c39),
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            FlatButton(
+                              padding: EdgeInsets.all(5),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                              color: Color(0xffff8c39),
+                              textColor: Colors.white,
+                              onPressed: () {},
+                              child: Text(
+                                "Save 65%",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                InkWell(
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 10),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        color: colorCustom.shade500,
+                        width: 2,
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Monthly Plan",
+                              style: TextStyle(
+                                color: Color(0xff1d2f6f),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "\$15",
+                              style: TextStyle(
+                                color: Color(0xffff8c39),
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            FlatButton(
+                              padding: EdgeInsets.all(5),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                              color: Color(0xffff8c39),
+                              textColor: Colors.white,
+                              onPressed: () {},
+                              child: Text(
+                                "Save 80%",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                InkWell(
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 10),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        color: colorCustom.shade500,
+                        width: 2,
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Free Plan",
+                              style: TextStyle(
+                                color: Color(0xff1d2f6f),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Invite 5 friends & get 2 days free",
+                              style: TextStyle(
+                                color: Color(0xffff8c39),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            FlatButton(
+                              padding: EdgeInsets.all(5),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                              color: Color(0xffff8c39),
+                              textColor: Colors.white,
+                              onPressed: () {},
+                              child: Text(
+                                "Save 100%",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontFamily: "Poppins",
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
         ],
-      )
+      ),
     ]);
   }
 }
