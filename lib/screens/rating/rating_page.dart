@@ -2,7 +2,7 @@ import 'package:shopline/app_properties.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-import 'package:shopline/screens/rating/rating_dialog.dart';
+import 'package:shopline/screens/rating/rating_pop_up.dart';
 
 class RatingPage extends StatefulWidget {
   @override
@@ -31,7 +31,7 @@ class _RatingPageState extends State<RatingPage> {
                     child: Dialog(
                       shape: BeveledRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(10))),
-                      child: RatingDialog(),
+                      child: RatingPopUp(),
                     ));
               },
               color: Colors.black,
