@@ -14,7 +14,9 @@ class ProductList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double cardHeight = MediaQuery.of(context).size.height / 2.7;
+    // double cardHeight = MediaQuery.of(context).size.height / 2.7;
+    // double cardWidth = MediaQuery.of(context).size.width / 1.8;
+    double cardHeight = MediaQuery.of(context).size.height / 4.7;
     double cardWidth = MediaQuery.of(context).size.width / 1.8;
     if (products == null) products = [];
 
@@ -115,7 +117,7 @@ class ProductCard extends StatelessWidget {
             height: height,
             width: width,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(24)),
+              borderRadius: BorderRadius.all(Radius.circular(20)),
               color: mediumYellow,
             ),
             child: Column(
@@ -130,13 +132,13 @@ class ProductCard extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     Align(
-                        alignment: Alignment.topLeft,
+                        alignment: Alignment.topRight,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
                             product.name ?? '',
                             style:
-                                TextStyle(color: Colors.white, fontSize: 16.0),
+                                TextStyle(color: Colors.white, fontSize: 10.0),
                           ),
                         )),
                     Align(
@@ -154,7 +156,7 @@ class ProductCard extends StatelessWidget {
                           '\$${product.price ?? 0.0}',
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 18,
+                              fontSize: 15,
                               fontWeight: FontWeight.bold),
                         ),
                       ),

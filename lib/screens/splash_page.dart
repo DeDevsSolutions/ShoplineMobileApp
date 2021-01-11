@@ -1,5 +1,6 @@
 import 'package:shopline/app_properties.dart';
 import 'package:shopline/screens/auth/welcome_back_page.dart';
+import 'package:shopline/screens/auth/landing_page.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -34,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen>
 
   void navigationPage() {
     Navigator.of(context)
-        .pushReplacement(MaterialPageRoute(builder: (_) => WelcomeBackPage()));
+        .pushReplacement(MaterialPageRoute(builder: (_) => LandingPage()));
   }
 
   Widget build(BuildContext context) {
@@ -61,7 +62,7 @@ class _SplashScreenState extends State<SplashScreen>
                         children: [
                           TextSpan(text: 'Powered by '),
                           TextSpan(
-                              text: 'int2.io',
+                              text: 'DeDevsSolutions',
                               style: TextStyle(fontWeight: FontWeight.bold))
                         ]),
                   ),
