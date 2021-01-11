@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomBottomBar extends StatelessWidget {
@@ -12,32 +13,32 @@ class CustomBottomBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           IconButton(
-            icon: Icon(Icons.home_outlined),
+            icon: Icon(TablerIcons.home),
             // color: Colors.blueGrey,
             onPressed: () {
               controller.animateTo(0);
             },
           ),
           IconButton(
-            icon: Icon(Icons.list_alt),
+            icon: Icon(TablerIcons.search),
             onPressed: () {
               controller.animateTo(1);
             },
           ),
           IconButton(
-            icon: Icon(Icons.notifications_outlined),
+            icon: Icon(TablerIcons.bell),
             onPressed: () {
               controller.animateTo(2);
             },
           ),
           IconButton(
-            icon: Icon(Icons.pie_chart_outline_sharp),
+            icon: Icon(TablerIcons.chart_pie),
             onPressed: () {
               controller.animateTo(3);
             },
           ),
           IconButton(
-            icon: Icon(Icons.account_circle_outlined),
+            icon: Icon(TablerIcons.user),
             onPressed: () {
               controller.animateTo(4);
             },

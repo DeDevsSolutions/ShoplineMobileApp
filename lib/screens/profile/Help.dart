@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
+
 // import 'package:shopline/Edit_Profile.dart';
 // import 'package:shopline/Feed_User_Profile.dart';
 // import 'package:shopline/User_Profile.dart';
@@ -279,7 +281,7 @@ class Profile extends StatelessWidget {
         ),
       ),
       body: Center(
-        /*child: Column(
+          /*child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             RaisedButton(
@@ -324,7 +326,7 @@ class Profile extends StatelessWidget {
             ),
           ],
         ),*/
-      ),
+          ),
     );
   }
 }
@@ -337,13 +339,22 @@ class Help extends StatelessWidget {
     return Scaffold(
         backgroundColor: Color(0xffF1F1F1),
         appBar: AppBar(
-          backgroundColor: colorCustom,
-          title: Text("Help & Feedback"),
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(
+            color: Color(0xff5d4c77), //change your color here
+          ),
+          title: Text(
+            'Help & Feedback',
+            style: TextStyle(
+              color: Color(0xff5d4c77),
+              fontSize: 18,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
           actions: <Widget>[
             IconButton(
               icon: Icon(
                 Icons.check,
-                color: Colors.white,
               ),
               onPressed: () {
                 Navigator.pop(context);
@@ -446,8 +457,9 @@ class Help extends StatelessWidget {
                               height: 40,
                               width: 40,
                               child: Icon(
-                                Icons.add_a_photo,
+                                TablerIcons.camera,
                                 color: colorCustom,
+                                size: 40,
                               ),
                             ))
                       ],
@@ -466,15 +478,21 @@ class Help extends StatelessWidget {
                     child: Row(
                       children: [
                         Icon(
-                          Icons.sports_soccer,
+                          TablerIcons.brand_facebook,
                           color: colorCustom,
                         ),
-                        Icon(
-                          Icons.sports_soccer,
-                          color: colorCustom,
+                        SizedBox(
+                          width: 20,
                         ),
                         Icon(
-                          Icons.sports_soccer,
+                          TablerIcons.brand_twitter,
+                          color: colorCustom,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Icon(
+                          TablerIcons.brand_instagram,
                           color: colorCustom,
                         ),
                       ],

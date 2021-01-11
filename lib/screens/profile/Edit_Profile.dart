@@ -26,15 +26,22 @@ class EditProfile extends StatelessWidget {
       key: _globalKey,
       backgroundColor: Color(0xffF1F1F1),
       appBar: AppBar(
-        backgroundColor: colorCustom,
-        title: Center(
-          child: Text('Edit Profile'),
+        backgroundColor: Colors.white,
+        iconTheme: IconThemeData(
+          color: Color(0xff5d4c77), //change your color here
+        ),
+        title: Text(
+          'Edit Profile',
+          style: TextStyle(
+            color: Color(0xff5d4c77),
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
+          ),
         ),
         actions: <Widget>[
           IconButton(
             icon: Icon(
               Icons.check,
-              color: Colors.white,
             ),
             onPressed: () {
               Navigator.pop(context);
@@ -91,7 +98,8 @@ class EditProfile extends StatelessWidget {
                         child: Stack(
                           children: <Widget>[
                             CircleAvatar(
-                              backgroundImage: AssetImage('assets/background.jpg'),
+                              backgroundImage:
+                                  AssetImage('assets/background.jpg'),
                               radius: 70,
                             ),
                             Positioned(
@@ -109,7 +117,8 @@ class EditProfile extends StatelessWidget {
                                           },
                                         ),
                                       );
-                                      _globalKey.currentState.showSnackBar(snackBar);
+                                      _globalKey.currentState
+                                          .showSnackBar(snackBar);
                                     },
                                     child: Container(
                                       height: 40,
