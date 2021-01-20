@@ -2,6 +2,7 @@ import 'package:shopline/app_properties.dart';
 import 'package:shopline/custom_background.dart';
 import 'package:shopline/models/product.dart';
 import 'package:shopline/screens/analytics/analytics_page.dart';
+import 'package:shopline/screens/live_window/video_player.dart';
 import 'package:shopline/screens/profile/user_profile.dart';
 import 'package:shopline/screens/category/category_list_page.dart';
 import 'package:shopline/screens/comments/comments_page.dart';
@@ -73,10 +74,10 @@ class _MainPageState extends State<MainPage>
             'Shopline',
             style: TextStyle(fontSize: 20, color: Colors.blue),
           ),
-          IconButton(
+          /*  IconButton(
               onPressed: () => Navigator.of(context)
                   .push(MaterialPageRoute(builder: (_) => SearchPage())),
-              icon: Icon(Icons.search_outlined)),
+              icon: Icon(Icons.search_outlined)), */
           IconButton(
               onPressed: () => Navigator.of(context)
                   .push(MaterialPageRoute(builder: (_) => CheckOutPage())),
@@ -248,15 +249,15 @@ class _MainPageState extends State<MainPage>
                 ),
               ),
             ),
-            CategoryListPage(),
-            NotificationsFull(),
+            SearchPage(),
+            OrderPage(),
             AnalyticsPage(),
             // ProfilePage()
             UserProfile(),
           ],
         ),
       ),
-      floatingActionButton: floatingActionButton,
+      //floatingActionButton: floatingActionButton,
     );
   }
 }
