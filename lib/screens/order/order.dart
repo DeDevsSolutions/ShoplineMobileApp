@@ -1,25 +1,17 @@
+import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
+import 'package:shopline/screens/order/tabs/customers_tab.dart';
+import 'package:shopline/screens/order/tabs/you_tab.dart';
 
-void main() => runApp(OrderPage());
-
-void handleClick(String value) {
-  switch (value) {
-    case 'Share':
-      break;
-    case 'Turn on notifications':
-      break;
-    case 'Mute':
-      break;
-    case 'Report':
-      break;
-  }
-}
 
 class OrderPage extends StatelessWidget {
   final _globalKey = GlobalKey<ScaffoldState>();
-
+  final List<Tab> tabs = <Tab>[
+    new Tab(text: "From Customers"),
+    new Tab(text: "You")
+  ];
   @override
   Widget build(BuildContext context) {
     Map<int, Color> color = {
@@ -58,164 +50,42 @@ class OrderPage extends StatelessWidget {
           ),
         ),
       ),
-      body: ListView(padding: EdgeInsets.all(10), children: <Widget>[
-        Column(
-          children: [
-            Container(
-              //height: 50,
-              padding: EdgeInsets.all(10),
-              margin: const EdgeInsets.only(bottom: 20),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: Colors.white,
-              ),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      padding: EdgeInsets.only(right: 10),
-                      child: FlatButton(
-                        padding: EdgeInsets.all(10),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        color: Color(0xffff8c39),
-                        textColor: Colors.white,
-                        onPressed: () {},
-                        child: Text(
-                          "From Customers",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 13,
-                            fontFamily: "Poppins",
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
-                    ),
-                    flex: 1,
+      body: DefaultTabController(
+        length: 2,
+        child: NestedScrollView(
+          headerSliverBuilder: (context, value) {
+            return [
+              SliverToBoxAdapter(
+                child: Container(
+                  padding: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.white,
                   ),
-                  Expanded(
-                    child: Container(
-                      padding: EdgeInsets.only(right: 10),
-                      child: FlatButton(
-                          padding: EdgeInsets.all(0),
-                          shape: RoundedRectangleBorder(
-                              //side: BorderSide(color: colorCustom.shade700),
-                              borderRadius: BorderRadius.circular(20)),
-                          textColor: colorCustom.shade700,
-                          onPressed: () {},
-                          child: Opacity(
-                            opacity: 0.50,
-                            child: Text(
-                              "You",
-                              style: TextStyle(
-                                color: Color(0xff1d2f6f),
-                                fontSize: 13,
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          )),
+                  child: TabBar(
+                    labelStyle: TextStyle(fontSize: 15.0),
+                    unselectedLabelColor: Colors.grey,
+                    indicatorSize: TabBarIndicatorSize.tab,
+                    indicator: new BubbleTabIndicator(
+                      indicatorHeight: 40.0,
+                      indicatorColor: Color(0xffff8c39),
+                      tabBarIndicatorSize: TabBarIndicatorSize.tab,
                     ),
-                    flex: 1,
+                    tabs: tabs,
                   ),
-                ],
-              ),
-            ),
-            Container(
-                padding: EdgeInsets.all(20),
-                margin: const EdgeInsets.only(bottom: 20),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.white,
                 ),
-                child: Column(children: [
-                  Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 110,
-                              height: 125,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Color(0xffc4c4c4),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Graffiti Art(2)",
-                                  style: TextStyle(
-                                    color: Color(0xff1d2f6f),
-                                    fontSize: 13,
-                                    fontFamily: "Poppins",
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                Text(
-                                  "UGX 20,000",
-                                  style: TextStyle(
-                                    color: Color(0xff5d4c77),
-                                    fontSize: 16,
-                                    fontFamily: "Poppins",
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                                Row(children: [
-                                  Icon(
-                                    TablerIcons.gift,
-                                    color: Color(0xff1d2f6f),
-                                    size: 12,
-                                    semanticLabel:
-                                        'Text to announce in accessibility modes',
-                                  ),
-                                  Text(
-                                    "Free Delivery",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Color(0xff424242),
-                                      fontSize: 13,
-                                      fontFamily: "Poppins",
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  )
-                                ]),
-                                Row(children: [
-                                  Icon(
-                                    TablerIcons.truck,
-                                    color: Color(0xff1d2f6f),
-                                    size: 12,
-                                    semanticLabel:
-                                        'Text to announce in accessibility modes',
-                                  ),
-                                  Text(
-                                    "Gayaza, Kasangati",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Color(0xff424242),
-                                      fontSize: 13,
-                                      fontFamily: "Poppins",
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                ])
-                              ],
-                            ),
-                          ],
-                        ),
-                      ]),
-                ])),
-          ],
-        )
-      ]),
+              ),
+            ];
+          },
+          body: TabBarView(
+            children: [
+              CustomersTab(),
+              YouTab(),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

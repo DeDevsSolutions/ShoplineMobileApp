@@ -1,9 +1,11 @@
 import 'package:shopline/app_properties.dart';
 import 'package:shopline/models/product.dart';
+import 'package:shopline/screens/discover/discover_empty.dart';
 import 'package:shopline/screens/product/view_product_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rubber/rubber.dart';
+import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 
 class SearchPage extends StatefulWidget {
   @override
@@ -83,102 +85,60 @@ class _SearchPageState extends State<SearchPage>
     _controller.expand();
   }
 
+  Widget _returnEmpty() {
+    return Container(
+        margin: const EdgeInsets.only(top: kToolbarHeight),
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        child: Column(children: <Widget>[
+          Row(
+              //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                BackButton(),
+                Container(
+                  width: 320,
+                  height: 42,
+                  alignment: Alignment.topRight,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.white,
+                  ),
+                  child: IconButton(
+                      onPressed: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => SearchPage())),
+                      icon: Icon(Icons.search_outlined)),
+                ),
+              ]),
+          Container(
+              width: 360,
+              height: 580,
+              alignment: Alignment.bottomCenter,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.white,
+              ),
+              child: Column(children: <Widget>[
+                Image(image: AssetImage('assets/search_empty.PNG')),
+                Opacity(
+                  opacity: 0.50,
+                  child: Text(
+                    "No Search Results",
+                    style: TextStyle(
+                      color: Color(0xff1d2f6f),
+                      fontSize: 16,
+                      fontFamily: "Poppins",
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                )
+              ]))
+        ]));
+  }
+
   Widget _getLowerLayer() {
     return Container(
       margin: const EdgeInsets.only(top: kToolbarHeight),
       child: Column(
         children: <Widget>[
-          /*  Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text(
-                  'Discover',
-                  style: TextStyle(
-                    color: Color(0xff5d4c77),
-                    fontSize: 18,
-                    fontFamily: "Poppins",
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                CloseButton()
-              ],
-            ),
-          ), */
-          Container(
-              width: 360,
-              height: 42,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(0),
-                  topRight: Radius.circular(0),
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
-                ),
-                color: Colors.white,
-              ),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text(
-                      "Discover",
-                      style: TextStyle(
-                        color: Color(0xff5d4c77),
-                        fontSize: 18,
-                        fontFamily: "Poppins",
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    CloseButton()
-                    //Icon(Icons.search_outlined),
-                  ])),
-          Container(
-            margin: EdgeInsets.symmetric(horizontal: 16.0),
-            decoration: BoxDecoration(
-                border:
-                    Border(bottom: BorderSide(color: Colors.orange, width: 1))),
-            child: TextField(
-              controller: searchController,
-              onChanged: (value) {
-                if (value.isNotEmpty) {
-                  List<Product> tempList = List<Product>();
-                  products.forEach((product) {
-                    if (product.name.toLowerCase().contains(value)) {
-                      tempList.add(product);
-                    }
-                  });
-                  setState(() {
-                    searchResults.clear();
-                    searchResults.addAll(tempList);
-                  });
-                  return;
-                } else {
-                  setState(() {
-                    searchResults.clear();
-                    searchResults.addAll(products);
-                  });
-                }
-              },
-              cursorColor: darkGrey,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.zero,
-                  border: InputBorder.none,
-                  prefixIcon: SvgPicture.asset(
-                    'assets/icons/search_icon.svg',
-                    fit: BoxFit.scaleDown,
-                  ),
-                  suffix: FlatButton(
-                      onPressed: () {
-                        searchController.clear();
-                        searchResults.clear();
-                      },
-                      child: Text(
-                        'Clear',
-                        style: TextStyle(color: Colors.red),
-                      ))),
-            ),
-          ),
           Flexible(
             child: Container(
               color: Colors.orange[50],
@@ -192,6 +152,9 @@ class _SearchPageState extends State<SearchPage>
                                 builder: (_) => ViewProductPage(
                                       product: searchResults[index],
                                     ))),
+                        leading: CircleAvatar(
+                            backgroundImage:
+                                AssetImage(searchResults[index].image)),
                         title: Text(searchResults[index].name),
                       ))),
             ),
@@ -347,25 +310,100 @@ class _SearchPageState extends State<SearchPage>
         top: true,
         bottom: false,
         child: Scaffold(
-//          bottomSheet: ClipRRect(
-//            borderRadius: BorderRadius.only(
-//                topRight: Radius.circular(25), topLeft: Radius.circular(25)),
-//            child: BottomSheet(
-//                onClosing: () {},
-//                builder: (_) => Container(
-//                      padding: EdgeInsets.all(16.0),
-//                      child: Row(
-//                          mainAxisAlignment: MainAxisAlignment.center,
-//                          children: <Widget>[Text('Filters')]),
-//                      color: Colors.white,
-//                      width: MediaQuery.of(context).size.height,
-//                    )),
-//          ),
+            // bottomSheet: ClipRRect(
+            //   borderRadius: BorderRadius.only(
+            //       topRight: Radius.circular(25), topLeft: Radius.circular(25)),
+            //   child: BottomSheet(
+            //       onClosing: () {},
+            //       builder: (_) => Container(
+            //             padding: EdgeInsets.all(16.0),
+            //             child: Row(
+            //                 mainAxisAlignment: MainAxisAlignment.center,
+            //                 children: <Widget>[Text('Filters')]),
+            //             color: Colors.white,
+            //             width: MediaQuery.of(context).size.height,
+            //           )),
+            // ),
+            appBar: AppBar(
+              backgroundColor: Colors.white,
+              iconTheme: IconThemeData(
+                color: Color(0xff5d4c77), //change your color here
+              ),
+              //automaticallyImplyLeading:
+              //   false, //Comment or set to false to show backButton
+              title: Container(
+                margin: EdgeInsets.symmetric(horizontal: 16.0),
+                decoration: BoxDecoration(
+                    /* border: Border(
+                      bottom: BorderSide(color: Colors.orange, width: 1)), */
+                    ),
+                child: TextField(
+                  controller: searchController,
+                  onChanged: (value) {
+                    if (value.isNotEmpty) {
+                      List<Product> tempList = List<Product>();
+                      products.forEach((product) {
+                        if (product.name.toLowerCase().contains(value)) {
+                          tempList.add(product);
+                        }
+                      });
+                      setState(() {
+                        searchResults.clear();
+                        searchResults.addAll(tempList);
+                      });
+                      return;
+                    } else {
+                      //DiscoverEmpty();
+                      // _returnEmpty();
+                      setState(() {
+                        searchResults.clear();
+                        searchResults.addAll(products);
+                      });
+                    }
+                  },
+                  cursorColor: darkGrey,
+                  decoration: InputDecoration(
+                      contentPadding: EdgeInsets.zero,
+                      border: InputBorder.none,
+                      /* prefixIcon: SvgPicture.asset(
+                        'assets/icons/search_icon.svg',
+                        fit: BoxFit.scaleDown,
+                      ), */
+                      suffix: FlatButton(
+                          onPressed: () {
+                            searchController.clear();
+                            searchResults.clear();
+                          },
+                          child: Text(
+                            'Clear',
+                            style: TextStyle(color: Colors.red),
+                          ))),
+                ),
+                //Icon(TablerIcons.search)
+              ),
+              actions: [
+                IconButton(icon: Icon(TablerIcons.search), onPressed: () {})
+              ],
+              /* title: Text(
+          "Discover",
+          style: TextStyle(
+            color: Color(0xff5d4c77),
+            fontSize: 18,
+            fontFamily: "Poppins",
+            fontWeight: FontWeight.w600,
+          ),
+        ), */
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.vertical(
+                  bottom: Radius.circular(30),
+                ),
+              ),
+            ),
             body: RubberBottomSheet(
-          lowerLayer: _getLowerLayer(), // The underlying page (Widget)
-          upperLayer: _getUpperLayer(), // The bottomsheet content (Widget)
-          animationController: _controller, // The one we created earlier
-        )),
+              lowerLayer: _getLowerLayer(), // The underlying page (Widget)
+              upperLayer: _getUpperLayer(), // The bottomsheet content (Widget)
+              animationController: _controller, // The one we created earlier
+            )),
       ),
     );
   }

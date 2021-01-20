@@ -2,7 +2,7 @@ import 'package:shopline/app_properties.dart';
 import 'package:shopline/models/product.dart';
 import 'package:shopline/screens/shop/check_out_page.dart';
 import 'package:flutter/material.dart';
-
+import 'package:shopline/screens/order/components/order_bottomSheet.dart';
 import 'shop_bottomSheet.dart';
 
 class ProductOption extends StatelessWidget {
@@ -71,7 +71,7 @@ class ProductOption extends StatelessWidget {
                   InkWell(
                     onTap: () {
                       scaffoldKey.currentState.showBottomSheet((context) {
-                        return ShopBottomSheet();
+                        return OrderBottomSheet();
                       });
                     },
                     child: Container(

@@ -2,7 +2,6 @@ import 'package:shopline/app_properties.dart';
 import 'package:shopline/models/product.dart';
 import 'package:shopline/screens/shop/check_out_page.dart';
 import 'package:flutter/material.dart';
-
 import 'shop_product.dart';
 
 class ShopBottomSheet extends StatefulWidget {
