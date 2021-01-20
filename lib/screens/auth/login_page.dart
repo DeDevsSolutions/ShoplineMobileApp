@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 
 // import 'Widget/bezierContainer.dart';
 import 'signup_page.dart';
-import 'welcome_back_page.dart';
-import 'forgot_password_page.dart';
 import 'package:shopline/screens/main/main_page.dart';
 
 class LoginPage extends StatefulWidget {
