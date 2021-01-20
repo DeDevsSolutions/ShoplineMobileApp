@@ -113,7 +113,7 @@ class ProductCard extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           Container(
-            margin: const EdgeInsets.only(left: 30),
+            margin: const EdgeInsets.fromLTRB(30, 20, 0, 10),
             height: height,
             width: width,
             decoration: BoxDecoration(

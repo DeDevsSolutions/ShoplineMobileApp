@@ -3,6 +3,7 @@ import 'package:shopline/models/product.dart';
 import 'package:shopline/screens/product/product_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 
 class RecommendedList extends StatelessWidget {
   List<Product> products = [
@@ -32,278 +33,273 @@ class RecommendedList extends StatelessWidget {
                 child: ListView.builder(
                   scrollDirection: Axis.vertical,
                   itemCount: products.length,
-                  itemBuilder: (_, index) => InkWell(
-                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                        builder: (_) => ProductPage(product: products[index]))),
-                    child: Container(
-                      padding: EdgeInsets.all(20),
-                      margin: const EdgeInsets.only(bottom: 20),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.grey[50],
-                      ),
-                      child: Column(children: [
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 20,
-                                    child: ClipOval(
-                                      child: Image.asset(
-                                        products[index].image,
-                                        height: 150,
-                                        width: 150,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Mercy Atim",
-                                        style: TextStyle(
-                                          // color: Color(0xff1d2f6f),
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                      SizedBox(height: 5),
-                                      Text(
-                                        "Fashion Designer",
-                                        style: TextStyle(
-                                          color: Color(0xff1d2f6f),
-                                          fontSize: 12,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Text("2hrs"),
-                                  Icon(
-                                    Icons.keyboard_arrow_down,
-                                    color: Colors.grey,
-                                  ),
-                                ],
-                              ),
-                            ]),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Material(
-                          child: InkWell(
-                            onTap: () {
-                              var snackBar = SnackBar(
-                                content: Text('Item image'),
-                                action: SnackBarAction(
-                                  label: 'View',
-                                  textColor: Color(0xffff8c39),
-                                  onPressed: () {
-                                    // Some code to undo the change.
-                                  },
-                                ),
-                              );
-                              // _globalKey.currentState.showSnackBar(snackBar);
-                            },
-                            // handle your onTap here
-                            child: Image.asset(
-                              products[index].image,
-                              height: 300,
-                              // width: 150,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                        Row(
+                  itemBuilder: (_, index) => Container(
+                    padding: EdgeInsets.all(20),
+                    margin: const EdgeInsets.only(bottom: 20),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.grey[50],
+                    ),
+                    child: Column(children: [
+                      Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              padding: EdgeInsets.only(top: 10, bottom: 10),
-                              margin: const EdgeInsets.only(top: 10),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.blue.shade200,
-                                    offset: Offset(0.0, 1.0), //(x,y)
-                                    blurRadius: 20.0,
-                                  ),
-                                ],
-                              ),
-                              child: Column(
-                                // mainAxisAlignment: MainAxisAlignment.center,
-                                // crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Row(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Container(
-                                            padding: EdgeInsets.only(
-                                                left: 10, right: 5),
-                                            child: Icon(
-                                              Icons.favorite,
-                                              color: Colors.red,
-                                              size: 24,
-                                              semanticLabel:
-                                                  'Text to announce in accessibility modes',
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            child: Text(
-                                              "6.2k",
-                                              style: TextStyle(
-                                                color: Colors.red,
-                                                fontSize: 14,
-                                                fontFamily: "Poppins",
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            padding: EdgeInsets.only(
-                                                left: 20, right: 5),
-                                            child: Icon(
-                                              Icons.message_outlined,
-                                              color: Colors.blue.shade500,
-                                              size: 24,
-                                              semanticLabel:
-                                                  'Text to announce in accessibility modes',
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            child: Text(
-                                              "259",
-                                              style: TextStyle(
-                                                color: Colors.blue,
-                                                fontSize: 14,
-                                                fontFamily: "Poppins",
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Container(
-                                            padding: EdgeInsets.only(
-                                                left: 20, right: 5),
-                                            child: Icon(
-                                              Icons.repeat_rounded,
-                                              color: Color(0xffff8c39),
-                                              size: 24,
-                                              semanticLabel:
-                                                  'Text to announce in accessibility modes',
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            width: 30,
-                                            child: Text(
-                                              "53",
-                                              style: TextStyle(
-                                                color: Color(0xffff8c39),
-                                                fontSize: 14,
-                                                fontFamily: "Poppins",
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(top: 10),
-                              child: SizedBox(
-                                width: 50,
-                                child: FlatButton(
-                                  onPressed: () {
-                                    var snackBar = SnackBar(
-                                      content: Text('Shop Item'),
-                                      action: SnackBarAction(
-                                        label: 'View',
-                                        textColor: Color(0xffff8c39),
-                                        onPressed: () {
-                                          // Some code to undo the change.
-                                        },
-                                      ),
-                                    );
-                                    // _globalKey.currentState.showSnackBar(snackBar);
-                                  },
-                                  color: Color(0xffE4E5FD),
-                                  child: Icon(
-                                    Icons.shopping_bag_outlined,
-                                    color: Colors.blue,
-                                    size: 24.0,
-                                  ),
-                                  padding: EdgeInsets.all(12),
-                                  shape: CircleBorder(),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              products[index].name,
-                              style: TextStyle(
-                                color: Color(0xff1d2f6f),
-                                fontSize: 16,
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              "UGX 259,999",
-                              style: TextStyle(
-                                color: Color(0xff5d4c77),
-                                fontSize: 20,
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            SizedBox(
-                              child: Text(
-                                products[index].description,
-                                style: TextStyle(
-                                  color: Color(0xff424242),
-                                  fontSize: 13,
+                            Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 20,
+                                  child: ClipOval(
+                                    child: Image.asset(
+                                      products[index].image,
+                                      height: 150,
+                                      width: 150,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
                                 ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Mercy Atim",
+                                      style: TextStyle(
+                                        // color: Color(0xff1d2f6f),
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                    SizedBox(height: 5),
+                                    Text(
+                                      "Fashion Designer",
+                                      style: TextStyle(
+                                        color: Color(0xff1d2f6f),
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text("2hrs"),
+                                Icon(
+                                  Icons.keyboard_arrow_down,
+                                  color: Colors.grey,
+                                ),
+                              ],
+                            ),
+                          ]),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Material(
+                        child: InkWell(
+                          onTap: () {
+                            var snackBar = SnackBar(
+                              content: Text('Item image'),
+                              action: SnackBarAction(
+                                label: 'View',
+                                textColor: Color(0xffff8c39),
+                                onPressed: () {
+                                  // Some code to undo the change.
+                                },
                               ),
-                            )
-                          ],
+                            );
+                            // _globalKey.currentState.showSnackBar(snackBar);
+                          },
+                          // handle your onTap here
+                          child: Image.asset(
+                            products[index].image,
+                            height: 300,
+                            // width: 150,
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                      ]),
-                    ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(top: 10, bottom: 10),
+                            margin: const EdgeInsets.only(top: 10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.blue.shade200,
+                                  offset: Offset(0.0, 1.0), //(x,y)
+                                  blurRadius: 20.0,
+                                ),
+                              ],
+                            ),
+                            child: Column(
+                              // mainAxisAlignment: MainAxisAlignment.center,
+                              // crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Row(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Container(
+                                          padding: EdgeInsets.only(
+                                              left: 10, right: 5),
+                                          child: Icon(
+                                            Icons.favorite,
+                                            color: Colors.red,
+                                            size: 24,
+                                            semanticLabel:
+                                                'Text to announce in accessibility modes',
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          child: Text(
+                                            "6.2k",
+                                            style: TextStyle(
+                                              color: Colors.red,
+                                              fontSize: 14,
+                                              fontFamily: "Poppins",
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Container(
+                                          padding: EdgeInsets.only(
+                                              left: 20, right: 5),
+                                          child: Icon(
+                                            TablerIcons.message_2,
+                                            color: Colors.blue.shade500,
+                                            size: 24,
+                                            semanticLabel:
+                                                'Text to announce in accessibility modes',
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          child: Text(
+                                            "259",
+                                            style: TextStyle(
+                                              color: Colors.blue,
+                                              fontSize: 14,
+                                              fontFamily: "Poppins",
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Container(
+                                          padding: EdgeInsets.only(
+                                              left: 20, right: 5),
+                                          child: Icon(
+                                            TablerIcons.repeat,
+                                            color: Color(0xffff8c39),
+                                            size: 24,
+                                            semanticLabel:
+                                                'Text to announce in accessibility modes',
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 30,
+                                          child: Text(
+                                            "53",
+                                            style: TextStyle(
+                                              color: Color(0xffff8c39),
+                                              fontSize: 14,
+                                              fontFamily: "Poppins",
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.only(top: 10),
+                            child: SizedBox(
+                              width: 50,
+                              child: FlatButton(
+                                onPressed: () {
+                                  var snackBar = SnackBar(
+                                    content: Text('Shop Item'),
+                                    action: SnackBarAction(
+                                      label: 'View',
+                                      textColor: Color(0xffff8c39),
+                                      onPressed: () {
+                                        // Some code to undo the change.
+                                      },
+                                    ),
+                                  );
+                                  // _globalKey.currentState.showSnackBar(snackBar);
+                                },
+                                color: Color(0xffE4E5FD),
+                                child: Icon(
+                                  TablerIcons.shopping_cart,
+                                  color: Colors.blue,
+                                  size: 24.0,
+                                ),
+                                padding: EdgeInsets.all(12),
+                                shape: CircleBorder(),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            products[index].name,
+                            style: TextStyle(
+                              color: Color(0xff1d2f6f),
+                              fontSize: 16,
+                              fontFamily: "Poppins",
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            "UGX 259,999",
+                            style: TextStyle(
+                              color: Color(0xff5d4c77),
+                              fontSize: 20,
+                              fontFamily: "Poppins",
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          SizedBox(
+                            child: Text(
+                              products[index].description,
+                              style: TextStyle(
+                                color: Color(0xff424242),
+                                fontSize: 13,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ]),
                   ),
                 )),
           ),
