@@ -113,7 +113,7 @@ class CatalogTab extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10, bottom: 10),
                     margin: const EdgeInsets.only(top: 10),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(15),
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
@@ -230,11 +230,11 @@ class CatalogTab extends StatelessWidget {
                         },
                         color: Color(0xffE4E5FD),
                         child: Icon(
-                          TablerIcons.shopping_cart,
+                          TablerIcons.basket,
                           color: colorCustom,
-                          size: 24.0,
+                          size: 30.0,
                         ),
-                        padding: EdgeInsets.all(12),
+                        padding: EdgeInsets.fromLTRB(0, 12, 0, 12),
                         shape: CircleBorder(),
                       ),
                     ),
@@ -383,7 +383,7 @@ class CatalogTab extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10, bottom: 10),
                     margin: const EdgeInsets.only(top: 10),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(15),
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
@@ -512,11 +512,11 @@ class CatalogTab extends StatelessWidget {
                         },
                         color: Color(0xffE4E5FD),
                         child: Icon(
-                          TablerIcons.shopping_cart,
+                          TablerIcons.basket,
                           color: colorCustom,
-                          size: 24.0,
+                          size: 30.0,
                         ),
-                        padding: EdgeInsets.all(12),
+                        padding: EdgeInsets.fromLTRB(0, 12, 0, 12),
                         shape: CircleBorder(),
                       ),
                     ),

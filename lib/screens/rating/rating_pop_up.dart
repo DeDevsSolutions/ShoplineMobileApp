@@ -40,45 +40,50 @@ class RatingPopUp extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
-                  children: [
-                    IconButton(
-                      icon: Icon(
-                        TablerIcons.mood_sad,
-                        color: Colors.redAccent,
+                Flexible(
+                  child: Column(
+                    children: [
+                      IconButton(
+                        icon: Icon(
+                          TablerIcons.mood_sad,
+                          color: Colors.redAccent,
+                        ),
+                        onPressed: () {
+                          // do something
+                        },
                       ),
-                      onPressed: () {
-                        // do something
-                      },
-                    ),
-                    Text('Terrible',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.redAccent,
-                            fontWeight: FontWeight.w500)),
-                  ],
+                      Text('Terrible',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.redAccent,
+                              fontWeight: FontWeight.w500)),
+                    ],
+                  ),
                 ),
-                Column(
-                  children: [
-                    IconButton(
-                      icon: Icon(
-                        TablerIcons.mood_sad,
-                        color: Colors.red,
+                Flexible(
+                  child: Column(
+                    children: [
+                      IconButton(
+                        icon: Icon(
+                          TablerIcons.mood_sad,
+                          color: Colors.red,
+                        ),
+                        onPressed: () {
+                          // do something
+                        },
                       ),
-                      onPressed: () {
-                        // do something
-                      },
-                    ),
-                    Text('Bad',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.red,
-                            fontWeight: FontWeight.w500)),
-                  ],
+                      Text('Bad',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.red,
+                              fontWeight: FontWeight.w500)),
+                    ],
+                  ),
                 ),
-                Column(
+                Flexible(
+                    child: Column(
                   children: [
                     IconButton(
                       icon: Icon(
@@ -96,8 +101,9 @@ class RatingPopUp extends StatelessWidget {
                             color: Color(0xffff8c39),
                             fontWeight: FontWeight.w500)),
                   ],
-                ),
-                Column(
+                )),
+                Flexible(
+                    child: Column(
                   children: [
                     IconButton(
                       icon: Icon(
@@ -115,8 +121,9 @@ class RatingPopUp extends StatelessWidget {
                             color: Colors.green,
                             fontWeight: FontWeight.w500)),
                   ],
-                ),
-                Column(
+                )),
+                Flexible(
+                    child: Column(
                   children: [
                     IconButton(
                       icon: Icon(
@@ -134,7 +141,7 @@ class RatingPopUp extends StatelessWidget {
                             color: Color(0xff069506),
                             fontWeight: FontWeight.w500)),
                   ],
-                ),
+                )),
               ],
             ),
             SizedBox(
