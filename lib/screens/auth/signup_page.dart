@@ -81,19 +81,7 @@ class _SignUpPageState extends State<SignUpPage> {
         alignment: Alignment.center,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(50)),
-            color: Colors.blue
-            // boxShadow: <BoxShadow>[
-            //   BoxShadow(
-            //       color: Colors.grey.shade200,
-            //       offset: Offset(2, 4),
-            //       blurRadius: 5,
-            //       spreadRadius: 2)
-            // ],
-            // gradient: LinearGradient(
-            //     begin: Alignment.centerLeft,
-            //     end: Alignment.centerRight,
-            //     colors: [Color(0xfffbb448), Color(0xfff7892b)])
-            ),
+            color: Colors.blue),
         child: Text(
           'Sign Up',
           style: TextStyle(fontSize: 20, color: Colors.white),
@@ -243,22 +231,6 @@ class _SignUpPageState extends State<SignUpPage> {
           fontSize: 30,
           fontWeight: FontWeight.w700,
         ),
-        // style: GoogleFonts.portLligatSans(
-        //   textStyle: Theme.of(context).textTheme.display1,
-        //   fontSize: 30,
-        //   fontWeight: FontWeight.w700,
-        //   color: Color(0xffe46b10),
-        // ),
-        // children: [
-        //   TextSpan(
-        //     text: 'ev',
-        //     style: TextStyle(color: Colors.black, fontSize: 30),
-        //   ),
-        //   TextSpan(
-        //     text: 'rnz',
-        //     style: TextStyle(color: Color(0xffe46b10), fontSize: 30),
-        //   ),
-        // ]
       ),
     );
   }
@@ -300,39 +272,8 @@ class _SignUpPageState extends State<SignUpPage> {
                   _emailPasswordWidget(),
                   SizedBox(height: 20),
                   _signUpButton(),
-                  // Container(
-                  //   padding: EdgeInsets.symmetric(vertical: 10),
-                  //   alignment: Alignment.centerRight,
-                  //   child: Text('Forgot Password ?',
-                  //       style: TextStyle(
-                  //           fontSize: 14,
-                  //           fontWeight: FontWeight.w500,
-                  //           decoration: TextDecoration.underline,
-                  //           color: Colors.red)),
-                  //   // InkWell(
-                  //   //   onTap: () {
-                  //   //     Navigator.push(
-                  //   //         context,
-                  //   //         MaterialPageRoute(
-                  //   //             builder: (context) => ForgotPasswordPage()));
-                  //   //   },
-                  //   //   child: Container(
-                  //   //     padding: EdgeInsets.symmetric(horizontal: 10),
-                  //   //     child: Row(
-                  //   //       children: <Widget>[
-                  //   //         Text('Forgot Password ?',
-                  //   //             style: TextStyle(
-                  //   //                 fontSize: 14,
-                  //   //                 fontWeight: FontWeight.w500,
-                  //   //                 decoration: TextDecoration.underline,
-                  //   //                 color: Colors.red)),
-                  //   //       ],
-                  //   //     ),
-                  //   //   ),
-                  //   // ),
-                  // ),
-                  _divider(),
-                  _facebookButton(),
+                  // _divider(),
+                  // _facebookButton(),
                   SizedBox(height: height * .055),
                   _loginLabel(),
                 ],

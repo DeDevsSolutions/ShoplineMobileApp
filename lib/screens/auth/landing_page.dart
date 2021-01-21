@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'signup_page.dart';
 import 'welcome_back_page.dart';
 import 'login_page.dart';
+import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 
 class LandingPage extends StatefulWidget {
   LandingPage({Key key, this.title}) : super(key: key);
@@ -78,7 +79,7 @@ class _LandingPageState extends State<LandingPage> {
             SizedBox(
               height: 20,
             ),
-            Icon(Icons.fingerprint, size: 90, color: Colors.blue),
+            Icon(TablerIcons.qrcode, size: 90, color: Colors.blue),
             SizedBox(
               height: 20,
             ),
