@@ -41,6 +41,8 @@ dependencies:
   flutter_svg: ^0.18.0
   bubble_tab_indicator: ^0.1.4
   flutter_tabler_icons: ^1.0.2
+  video_player:
+  fl_chart: ^0.12.2
 
 dev_dependencies:
   flutter_test:

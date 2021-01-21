@@ -385,66 +385,66 @@ class UserProfile extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Container(
-                            padding: EdgeInsets.only(bottom: 10),
+                            padding: EdgeInsets.only(bottom: 15),
                             child: Text(
                               "Featured",
                               style: TextStyle(
                                 color: Color(0xff1d2f6f),
                                 fontSize: 13,
-                                fontFamily: "Poppins",
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
                           ),
                           Row(
                             children: [
-                              Expanded(
+                              Flexible(
                                 child: Container(
-                                  margin: const EdgeInsets.only(right: 10),
                                   width: double.infinity,
                                   height: 80,
                                   decoration: BoxDecoration(
                                     color: colorCustom.shade500,
-                                    borderRadius: BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(15),
                                   ),
                                 ),
-                                flex: 1,
                               ),
-                              Expanded(
-                                child: Container(
-                                  margin: const EdgeInsets.only(right: 10),
-                                  width: double.infinity,
-                                  height: 80,
-                                  decoration: BoxDecoration(
-                                    color: colorCustom.shade500,
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                ),
-                                flex: 1,
+                              SizedBox(
+                                width: 10,
                               ),
-                              Expanded(
+                              Flexible(
                                 child: Container(
-                                  margin: const EdgeInsets.only(right: 10),
                                   width: double.infinity,
                                   height: 80,
                                   decoration: BoxDecoration(
                                     color: colorCustom.shade500,
-                                    borderRadius: BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(15),
                                   ),
                                 ),
-                                flex: 1,
                               ),
-                              Expanded(
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Flexible(
                                 child: Container(
-                                  margin: const EdgeInsets.only(right: 10),
                                   width: double.infinity,
                                   height: 80,
                                   decoration: BoxDecoration(
                                     color: colorCustom.shade500,
-                                    borderRadius: BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(15),
                                   ),
                                 ),
-                                flex: 1,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Flexible(
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 80,
+                                  decoration: BoxDecoration(
+                                    color: colorCustom.shade500,
+                                    borderRadius: BorderRadius.circular(15),
+                                  ),
+                                ),
                               ),
                             ],
                           )
@@ -463,7 +463,8 @@ class UserProfile extends StatelessWidget {
                     color: Colors.white,
                   ),
                   child: TabBar(
-                    labelStyle: TextStyle(fontSize: 15.0),
+                    labelStyle: TextStyle(
+                        fontFamily: "Montserrat", fontWeight: FontWeight.bold),
                     unselectedLabelColor: Colors.grey,
                     indicatorSize: TabBarIndicatorSize.tab,
                     indicator: new BubbleTabIndicator(

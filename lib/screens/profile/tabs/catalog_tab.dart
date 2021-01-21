@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
+import 'package:shopline/screens/comments/comments_page.dart';
 
 class CatalogTab extends StatelessWidget {
   final _globalKey = GlobalKey<ScaffoldState>();
@@ -93,7 +94,6 @@ class CatalogTab extends StatelessWidget {
                   onTap: () {
                     // handle your onTap here
                   },
-
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: Image.asset(
@@ -113,7 +113,7 @@ class CatalogTab extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10, bottom: 10),
                     margin: const EdgeInsets.only(top: 10),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(15),
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
@@ -230,11 +230,11 @@ class CatalogTab extends StatelessWidget {
                         },
                         color: Color(0xffE4E5FD),
                         child: Icon(
-                          TablerIcons.shopping_cart,
+                          TablerIcons.basket,
                           color: colorCustom,
-                          size: 24.0,
+                          size: 30.0,
                         ),
-                        padding: EdgeInsets.all(12),
+                        padding: EdgeInsets.fromLTRB(0, 12, 0, 12),
                         shape: CircleBorder(),
                       ),
                     ),
@@ -383,7 +383,7 @@ class CatalogTab extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10, bottom: 10),
                     margin: const EdgeInsets.only(top: 10),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(15),
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
@@ -428,12 +428,24 @@ class CatalogTab extends StatelessWidget {
                               children: [
                                 Container(
                                   padding: EdgeInsets.only(left: 20, right: 5),
-                                  child: Icon(
-                                    TablerIcons.message_2,
+                                  child: IconButton(
+                                    icon: Icon(TablerIcons.message_2),
+                                    color: colorCustom.shade500,
+                                    onPressed: () {
+                                      showModalBottomSheet(
+                                        context: context,
+                                        builder: (context) {
+                                          return CommentsPage();
+                                        },
+                                        //elevation: 0,
+                                        //backgroundColor: Colors.transparent
+                                      );
+                                    },
+                                    /* TablerIcons.message_2,
                                     color: colorCustom.shade500,
                                     size: 24,
                                     semanticLabel:
-                                        'Text to announce in accessibility modes',
+                                        'Text to announce in accessibility modes', */
                                   ),
                                 ),
                                 SizedBox(
@@ -500,11 +512,11 @@ class CatalogTab extends StatelessWidget {
                         },
                         color: Color(0xffE4E5FD),
                         child: Icon(
-                          TablerIcons.shopping_cart,
+                          TablerIcons.basket,
                           color: colorCustom,
-                          size: 24.0,
+                          size: 30.0,
                         ),
-                        padding: EdgeInsets.all(12),
+                        padding: EdgeInsets.fromLTRB(0, 12, 0, 12),
                         shape: CircleBorder(),
                       ),
                     ),

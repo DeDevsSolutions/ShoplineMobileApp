@@ -2,6 +2,7 @@ import 'package:shopline/app_properties.dart';
 import 'package:shopline/custom_background.dart';
 import 'package:shopline/models/product.dart';
 import 'package:shopline/screens/analytics/analytics_page.dart';
+import 'package:shopline/screens/live_window/video_player.dart';
 import 'package:shopline/screens/profile/user_profile.dart';
 import 'package:shopline/screens/category/category_list_page.dart';
 import 'package:shopline/screens/comments/comments_page.dart';
@@ -155,7 +156,7 @@ class _MainPageState extends State<MainPage>
               ),
             ),
             SearchPage(),
-            NotificationsFull(),
+            OrderPage(),
             AnalyticsPage(),
             // ProfilePage()
             UserProfile(),

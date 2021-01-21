@@ -1,7 +1,10 @@
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
+import 'package:shopline/screens/analytics/tabs/account_tab.dart';
 import 'package:shopline/screens/analytics/tabs/market_stats_tab.dart';
+import 'package:shopline/screens/analytics/tabs/sales_tab.dart';
 
 class AnalyticsPage extends StatelessWidget {
   final _globalKey = GlobalKey<ScaffoldState>();
@@ -37,6 +40,37 @@ class AnalyticsPage extends StatelessWidget {
         iconTheme: IconThemeData(
           color: Color(0xff5d4c77), //change your color here
         ),
+        actions: [
+          Container(
+            padding: EdgeInsets.fromLTRB(0, 10, 20, 10),
+            child: FlatButton(
+              padding: EdgeInsets.only(left: 25, right: 15),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50)),
+              color: Colors.grey.shade200,
+              textColor: Color(0xff1d2f6f),
+              onPressed: () {},
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Today",
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Icon(
+                    TablerIcons.chevron_down,
+                    size: 20,
+                  )
+                ],
+              ),
+            ),
+          )
+        ],
         title: Text(
           '  Analytics',
           style: TextStyle(
@@ -65,7 +99,8 @@ class AnalyticsPage extends StatelessWidget {
                     color: Colors.white,
                   ),
                   child: TabBar(
-                    labelStyle: TextStyle(fontSize: 15.0),
+                    labelStyle: TextStyle(
+                        fontFamily: "Montserrat", fontWeight: FontWeight.bold),
                     unselectedLabelColor: Colors.grey,
                     indicatorSize: TabBarIndicatorSize.tab,
                     indicator: new BubbleTabIndicator(
@@ -81,8 +116,8 @@ class AnalyticsPage extends StatelessWidget {
           },
           body: TabBarView(
             children: [
-              MarketStatsTab(),
-              new Card(),
+              AccountTab(),
+              SalesTab(),
               MarketStatsTab(),
             ],
           ),

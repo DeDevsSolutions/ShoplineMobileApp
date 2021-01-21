@@ -14,6 +14,7 @@ class CommentsPage extends StatelessWidget {
       color: Colors.grey[100],
       child: SafeArea(
         child: Container(
+            height: MediaQuery.of(context).size.height,
             margin: const EdgeInsets.only(top: kToolbarHeight),
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Column(children: <Widget>[
@@ -65,6 +66,9 @@ class CommentsPage extends StatelessWidget {
                                     'assets/background.jpg',
                                   ),
                                   maxRadius: 24,
+                                ),
+                                SizedBox(
+                                  width: 10,
                                 ),
                                 Column(
                                     crossAxisAlignment:
