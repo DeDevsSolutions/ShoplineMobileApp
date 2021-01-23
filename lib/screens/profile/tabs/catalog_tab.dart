@@ -1,7 +1,10 @@
+import 'dart:html';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 import 'package:shopline/screens/comments/comments_page.dart';
+import 'package:shopline/screens/bottomsheet_fix_statusbar.dart';
 
 class CatalogTab extends StatelessWidget {
   final _globalKey = GlobalKey<ScaffoldState>();
@@ -429,24 +432,34 @@ class CatalogTab extends StatelessWidget {
                                 Container(
                                   padding: EdgeInsets.only(left: 20, right: 5),
                                   child: IconButton(
-                                    icon: Icon(TablerIcons.message_2),
-                                    color: colorCustom.shade500,
-                                    onPressed: () {
-                                      showModalBottomSheet(
-                                        context: context,
-                                        builder: (context) {
-                                          return CommentsPage();
-                                        },
-                                        //elevation: 0,
-                                        //backgroundColor: Colors.transparent
-                                      );
-                                    },
-                                    /* TablerIcons.message_2,
+                                      icon: Icon(TablerIcons.message_2),
+                                      color: colorCustom.shade500,
+                                      onPressed: () {
+                                        showModalBottomSheet(
+                                          context: context,
+                                          builder: (context) {
+                                            return CommentsPage();
+                                          },
+                                          //elevation: 0,
+                                          //backgroundColor: Colors.transparent
+                                        );
+                                        /* showModalBottomSheetApp(
+                                          context: context,
+                                          builder: (builder) {
+                                            return CommentsPage();
+                                          },
+                                          statusBarHeight:
+                                              MediaQuery.of(context)
+                                                  .padding
+                                                  .top,
+                                        );
+                                      } */
+                                        /* TablerIcons.message_2,
                                     color: colorCustom.shade500,
                                     size: 24,
                                     semanticLabel:
                                         'Text to announce in accessibility modes', */
-                                  ),
+                                      }),
                                 ),
                                 SizedBox(
                                   child: Text(

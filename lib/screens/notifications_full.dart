@@ -53,9 +53,11 @@ class NotificationsPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               new Stack(
+                                overflow: Overflow.visible,
                                 //alignment:new Alignment(x, y)
                                 children: <Widget>[
                                   new Container(
+                                    //width: 100,
                                     decoration: new BoxDecoration(
                                         borderRadius:
                                             BorderRadius.circular(25.0),
@@ -204,6 +206,7 @@ class NotificationsPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               new Stack(
+                                overflow: Overflow.visible,
                                 //alignment:new Alignment(x, y)
                                 children: <Widget>[
                                   new Container(
@@ -300,9 +303,9 @@ class NotificationsPage extends StatelessWidget {
                               Row(
                                 children: <Widget>[
                                   Icon(
-                                    Icons.favorite,
+                                    TablerIcons.user_plus,
                                     size: 14,
-                                    color: Colors.red,
+                                    color: Colors.black,
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.symmetric(
@@ -355,6 +358,7 @@ class NotificationsPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               new Stack(
+                                overflow: Overflow.visible,
                                 //alignment:new Alignment(x, y)
                                 children: <Widget>[
                                   new Container(
@@ -451,9 +455,9 @@ class NotificationsPage extends StatelessWidget {
                               Row(
                                 children: <Widget>[
                                   Icon(
-                                    Icons.favorite,
+                                    TablerIcons.star,
                                     size: 14,
-                                    color: Colors.red,
+                                    color: Colors.orange,
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.symmetric(
@@ -506,6 +510,7 @@ class NotificationsPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               new Stack(
+                                overflow: Overflow.visible,
                                 //alignment:new Alignment(x, y)
                                 children: <Widget>[
                                   new Container(
@@ -657,6 +662,7 @@ class NotificationsPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               new Stack(
+                                overflow: Overflow.visible,
                                 //alignment:new Alignment(x, y)
                                 children: <Widget>[
                                   new Container(
@@ -753,9 +759,9 @@ class NotificationsPage extends StatelessWidget {
                               Row(
                                 children: <Widget>[
                                   Icon(
-                                    Icons.favorite,
+                                    TablerIcons.users,
                                     size: 14,
-                                    color: Colors.red,
+                                    color: Colors.black,
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.symmetric(
@@ -808,6 +814,7 @@ class NotificationsPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               new Stack(
+                                overflow: Overflow.visible,
                                 //alignment:new Alignment(x, y)
                                 children: <Widget>[
                                   new Container(
@@ -904,7 +911,7 @@ class NotificationsPage extends StatelessWidget {
                               Row(
                                 children: <Widget>[
                                   Icon(
-                                    Icons.favorite,
+                                    Icons.repeat,
                                     size: 14,
                                     color: Colors.red,
                                   ),
@@ -959,6 +966,7 @@ class NotificationsPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               new Stack(
+                                overflow: Overflow.visible,
                                 //alignment:new Alignment(x, y)
                                 children: <Widget>[
                                   new Container(
@@ -1055,7 +1063,7 @@ class NotificationsPage extends StatelessWidget {
                               Row(
                                 children: <Widget>[
                                   Icon(
-                                    TablerIcons.message,
+                                    TablerIcons.message_2,
                                     size: 14,
                                     color: Colors.green,
                                   ),
@@ -1110,6 +1118,7 @@ class NotificationsPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               new Stack(
+                                overflow: Overflow.visible,
                                 //alignment:new Alignment(x, y)
                                 children: <Widget>[
                                   new Container(
@@ -1206,9 +1215,9 @@ class NotificationsPage extends StatelessWidget {
                               Row(
                                 children: <Widget>[
                                   Icon(
-                                    Icons.favorite,
+                                    TablerIcons.arrow_forward_up,
                                     size: 14,
-                                    color: Colors.red,
+                                    color: Colors.blue,
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.symmetric(

@@ -329,8 +329,9 @@ class _SearchPageState extends State<SearchPage>
               iconTheme: IconThemeData(
                 color: Color(0xff5d4c77), //change your color here
               ),
-              //automaticallyImplyLeading:
-              //   false, //Comment or set to false to show backButton
+
+              /* automaticallyImplyLeading:
+                  false,  */ //Comment or set to false to show backButton
               title: Container(
                 margin: EdgeInsets.symmetric(horizontal: 16.0),
                 decoration: BoxDecoration(
