@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shopline/screens/splash_page.dart';
+import 'package:shopline/models/user.dart';
 
+User currentUserModel; //For fetching data about current user
 void main() {
   runApp(MyApp());
 }

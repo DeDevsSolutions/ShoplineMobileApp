@@ -1,4 +1,4 @@
-import 'package:shopline/app_properties.dart';
+/* import 'package:shopline/app_properties.dart';
 import 'package:shopline/models/user.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
@@ -156,3 +156,4 @@ class TicketPainter extends CustomPainter {
     return false;
   }
 }
+ */

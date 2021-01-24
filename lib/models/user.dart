@@ -1,4 +1,40 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class User {
+  final String email;
+  final String id;
+  final String photoUrl;
+  final String username;
+  final String displayName;
+  final String bio;
+  final Map followers;
+  final Map following;
+
+  const User(
+      {this.username,
+      this.id,
+      this.photoUrl,
+      this.email,
+      this.displayName,
+      this.bio,
+      this.followers,
+      this.following});
+
+  factory User.fromDocument(DocumentSnapshot document) {
+    return User(
+      email: document['email'],
+      username: document['username'],
+      photoUrl: document['photoUrl'],
+      id: document.id,
+      displayName: document['displayName'],
+      bio: document['bio'],
+      followers: document['followers'],
+      following: document['following'],
+    );
+  }
+}
+
+/* class User {
   String gender;
   Name name;
   Location location;
@@ -14,17 +50,17 @@ class User {
 
   User(
       {this.gender,
-        this.name,
-        this.location,
-        this.email,
-        this.login,
-        this.dob,
-        this.registered,
-        this.phone,
-        this.cell,
-        this.id,
-        this.picture,
-        this.nat});
+      this.name,
+      this.location,
+      this.email,
+      this.login,
+      this.dob,
+      this.registered,
+      this.phone,
+      this.cell,
+      this.id,
+      this.picture,
+      this.nat});
 
   User.fromJson(Map<String, dynamic> json) {
     gender = json['gender'];
@@ -42,7 +78,7 @@ class User {
     cell = json['cell'];
     id = json['id'] != null ? new Id.fromJson(json['id']) : null;
     picture =
-    json['picture'] != null ? new Picture.fromJson(json['picture']) : null;
+        json['picture'] != null ? new Picture.fromJson(json['picture']) : null;
     nat = json['nat'];
   }
 
@@ -110,11 +146,11 @@ class Location {
 
   Location(
       {this.street,
-        this.city,
-        this.state,
-        this.postcode,
-        this.coordinates,
-        this.timezone});
+      this.city,
+      this.state,
+      this.postcode,
+      this.coordinates,
+      this.timezone});
 
   Location.fromJson(Map<String, dynamic> json) {
     street = json['street'];
@@ -194,12 +230,12 @@ class Login {
 
   Login(
       {this.uuid,
-        this.username,
-        this.password,
-        this.salt,
-        this.md5,
-        this.sha1,
-        this.sha256});
+      this.username,
+      this.password,
+      this.salt,
+      this.md5,
+      this.sha1,
+      this.sha256});
 
   Login.fromJson(Map<String, dynamic> json) {
     uuid = json['uuid'];
@@ -302,3 +338,4 @@ class Picture {
     return data;
   }
 }
+ */

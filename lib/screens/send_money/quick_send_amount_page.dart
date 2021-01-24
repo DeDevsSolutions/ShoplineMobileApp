@@ -1,4 +1,4 @@
-import 'package:shopline/app_properties.dart';
+/* import 'package:shopline/app_properties.dart';
 import 'package:shopline/models/user.dart';
 import 'package:shopline/screens/request_money/receive_page.dart';
 import 'package:flutter/material.dart';
@@ -187,3 +187,4 @@ class QuickSendAmountPage extends StatelessWidget {
                         ))))));
   }
 }
+ */

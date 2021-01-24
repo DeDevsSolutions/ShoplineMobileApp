@@ -1,4 +1,4 @@
-import 'package:shopline/app_properties.dart';
+/* import 'package:shopline/app_properties.dart';
 import 'package:shopline/screens/faq_page.dart';
 import 'package:shopline/screens/payment/payment_page.dart';
 import 'package:shopline/screens/settings/settings_page.dart';
@@ -154,3 +154,4 @@ class ProfilePage extends StatelessWidget {
     );
   }
 }
+ */
